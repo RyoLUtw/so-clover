@@ -1,0 +1,60 @@
+.groupLabel{
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    width: 18%;
+    height: 20vh;
+    border: 2px solid black;
+    background-color: #cccccc;
+    font-size: large;
+    margin-bottom: 1vh;
+}
+
+.textCardHolder{
+    display: inline-flex; 
+    justify-content: left; 
+    align-items: center; 
+    text-align: center; 
+    width: 100%;
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates 2 columns */
+    grid-template-rows: 1fr 1fr; /* Creates 2 rows */
+    gap: 0px; /* Adds some space between the grid items */
+    width: 18vw; /* Adjust the width as needed */
+    margin: 0.2vw;
+    border: 1px solid black
+}
+
+.grid-item {
+    border: 1px solid gray; /* Adds a border to each item */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    height: 15vh; /* Or any desired height */
+
+}
+
+.grid-1x3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Creates 3 columns */
+    grid-template-rows: 1fr; /* Creates 1 rows */
+    gap: 0px; /* Adds some space between the grid items */
+    width: 18vw; /* Adjust the width as needed */
+    margin-top: 1vh;
+    border: 1px solid black
+}
+
+.buttonHolder {
+    display: inline-block;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; /* Creates 2 rows */
+    gap: 0px; /* Adds some space between the grid items */
+    margin: 0.2vw;
+    border: 0px solid black;
+    align-items: center;
+    justify-content: center;
+}
