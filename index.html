@@ -8,72 +8,120 @@
 </head>
 
 <body>
-    <div id="groupLabelContainer">
-        <div id="groupD_L" class="groupLabel">D</div>
-        <div id="groupA" class="groupLabel">A</div>
-        <div id="groupB" class="groupLabel">B</div>
-        <div id="groupC" class="groupLabel">C</div>
-        <div id="groupD_R" class="groupLabel">D</div>
+    <div id="setupInterface">
+        <div id="inputLabelContainer">
+            <input type="text" id="inputD_L" class="inputBox" placeholder="Type Clue Here" />
+            <input type="text" id="inputA" class="inputBox" placeholder="Type Clue Here" />
+            <input type="text" id="inputB" class="inputBox" placeholder="Type Clue Here" />
+            <input type="text" id="inputC" class="inputBox" placeholder="Type Clue Here" />
+            <input type="text" id="inputD_R" class="inputBox" placeholder="Type Clue Here" />
+        </div>
+        <div class="textCardHolder">
+            <div id="answerCard1" class="grid-2x2" style="margin-left: 9vw;">
+                <div id="answerCard1-2" class="grid-item">answer1-2</div>
+                <div id="answerCard1-1" class="grid-item">answer1-1</div>
+                <div id="answerCard1-3" class="grid-item">answer1-3</div>
+                <div id="answerCard1-4" class="grid-item">answer1-4</div>
+            </div>
+
+            <div id="answerCard2" class="grid-2x2">
+                <div id="answerCard2-2" class="grid-item">answer2-2</div>
+                <div id="answerCard2-1" class="grid-item">answer2-1</div>
+                <div id="answerCard2-3" class="grid-item">answer2-3</div>
+                <div id="answerCard2-4" class="grid-item">answer2-4</div>
+            </div>
+
+            <div id="answerCard3" class="grid-2x2">
+                <div id="answerCard3-2" class="grid-item">answer3-2</div>
+                <div id="answerCard3-1" class="grid-item">answer3-1</div>
+                <div id="answerCard3-3" class="grid-item">answer3-3</div>
+                <div id="answerCard3-4" class="grid-item">answer3-4</div>
+            </div>
+
+            <div id="answerCard4" class="grid-2x2">
+                <div id="answerCard4-2" class="grid-item">answer4-2</div>
+                <div id="answerCard4-1" class="grid-item">answer4-1</div>
+                <div id="answerCard4-3" class="grid-item">answer4-3</div>
+                <div id="answerCard4-4" class="grid-item">answer4-4</div>
+            </div>
+
+        </div>
+        <div>
+            <input type="text" id="textInput" style="width: 90%; margin: 10px;"
+                placeholder="Enter Voc separated by commas">
+            <button id="loadContent" class="regularButton" onClick="loadVoc()">Load Voc</button>
+            <button id="startGame" class="regularButton" onClick="startGame()">start Game</button>
+
+        </div>
     </div>
 
-    <div class="textCardHolder">
-        <div class="buttonHolder">
-            <div id="textcard1" class="grid-2x2" style="margin-left: 9vw;">
-                <div id="textcard1-2" class="grid-item">text1-2</div>
-                <div id="textcard1-1" class="grid-item">text1-1</div>
-                <div id="textcard1-3" class="grid-item">text1-3</div>
-                <div id="textcard1-4" class="grid-item">text1-4</div>
+    <div id="playInterface" style="display: none;">
+        <div id="groupLabelContainer">
+            <div id="groupD_L" class="groupLabel">D</div>
+            <div id="groupA" class="groupLabel">A</div>
+            <div id="groupB" class="groupLabel">B</div>
+            <div id="groupC" class="groupLabel">C</div>
+            <div id="groupD_R" class="groupLabel">D</div>
+        </div>
+
+        <div id="textCardHolder" class="textCardHolder">
+            <div class="buttonHolder">
+                <div id="textCard1" class="grid-2x2" style="margin-left: 9vw;">
+                    <div id="textCard1-2" class="grid-item">text1-2</div>
+                    <div id="textCard1-1" class="grid-item">text1-1</div>
+                    <div id="textCard1-3" class="grid-item">text1-3</div>
+                    <div id="textCard1-4" class="grid-item">text1-4</div>
+                </div>
+                <div class="grid-1x3" style="margin-left: 9vw;">
+                    <button data-direction="left" data-row="1">←</button>
+                    <button onclick="rotateTextCard(event);" data-card="1">o</button>
+                    <button data-direction="right" data-row="1">→</button>
+                </div>
             </div>
-            <div class="grid-1x3" style="margin-left: 9vw;">
-                <button data-direction="left" data-row="1">←</button>
-                <button onclick="rotateTextCard(event);" data-card="1">o</button>
-                <button data-direction="right" data-row="1">→</button>
+            <div class="buttonHolder">
+                <div id="textCard2" class="grid-2x2">
+                    <div id="textCard2-2" class="grid-item">text2-2</div>
+                    <div id="textCard2-1" class="grid-item">text2-1</div>
+                    <div id="textCard2-3" class="grid-item">text2-3</div>
+                    <div id="textCard2-4" class="grid-item">text2-4</div>
+                </div>
+                <div class="grid-1x3">
+                    <button data-direction="left" data-row="2">←</button>
+                    <button onclick="rotateTextCard(event);" data-card="2">o</button>
+                    <button data-direction="right" data-row="2">→</button>
+                </div>
+            </div>
+            <div class="buttonHolder">
+                <div id="textCard3" class="grid-2x2">
+                    <div id="textCard3-2" class="grid-item">text3-2</div>
+                    <div id="textCard3-1" class="grid-item">text3-1</div>
+                    <div id="textCard3-3" class="grid-item">text3-3</div>
+                    <div id="textCard3-4" class="grid-item">text3-4</div>
+                </div>
+                <div class="grid-1x3">
+                    <button data-direction="left" data-row="3">←</button>
+                    <button onclick="rotateTextCard(event);" data-card="3">o</button>
+                    <button data-direction="right" data-row="3">→</button>
+                </div>
+            </div>
+            <div class="buttonHolder">
+                <div id="textCard4" class="grid-2x2">
+                    <div id="textCard4-2" class="grid-item">text4-2</div>
+                    <div id="textCard4-1" class="grid-item">text4-1</div>
+                    <div id="textCard4-3" class="grid-item">text4-3</div>
+                    <div id="textCard4-4" class="grid-item">text4-4</div>
+                </div>
+                <div class="grid-1x3">
+                    <button data-direction="left" data-row="4">←</button>
+                    <button onclick="rotateTextCard(event);" data-card="4">o</button>
+                    <button data-direction="right" data-row="4">→</button>
+                </div>
             </div>
         </div>
-        <div class="buttonHolder">
-            <div id="textcard2" class="grid-2x2">
-                <div id="textcard2-2" class="grid-item">text2-2</div>
-                <div id="textcard2-1" class="grid-item">text2-1</div>
-                <div id="textcard2-3" class="grid-item">text2-3</div>
-                <div id="textcard2-4" class="grid-item">text2-4</div>
-            </div>
-            <div class="grid-1x3">
-                <button data-direction="left" data-row="2">←</button>
-                <button onclick="rotateTextCard(event);" data-card="2">o</button>
-                <button data-direction="right" data-row="2">→</button>
-            </div>
-        </div>
-        <div class="buttonHolder">
-            <div id="textcard3" class="grid-2x2">
-                <div id="textcard3-2" class="grid-item">text3-2</div>
-                <div id="textcard3-1" class="grid-item">text3-1</div>
-                <div id="textcard3-3" class="grid-item">text3-3</div>
-                <div id="textcard3-4" class="grid-item">text3-4</div>
-            </div>
-            <div class="grid-1x3">
-                <button data-direction="left" data-row="3">←</button>
-                <button onclick="rotateTextCard(event);" data-card="3">o</button>
-                <button data-direction="right" data-row="3">→</button>
-            </div>
-        </div>
-        <div class="buttonHolder">
-            <div id="textcard4" class="grid-2x2">
-                <div id="textcard4-2" class="grid-item">text4-2</div>
-                <div id="textcard4-1" class="grid-item">text4-1</div>
-                <div id="textcard4-3" class="grid-item">text4-3</div>
-                <div id="textcard4-4" class="grid-item">text4-4</div>
-            </div>
-            <div class="grid-1x3">
-                <button data-direction="left" data-row="4">←</button>
-                <button onclick="rotateTextCard(event);" data-card="4">o</button>
-                <button data-direction="right" data-row="4">→</button>
-            </div>
-        </div>
+        <button class="regularButton" onclick="checkAnswer()">check Answer</button>
+    <script src="script.js"></script>
     </div>
     
-
-    </div>
-    <script src="script.js"></script>
 </body>
 
 </html>
