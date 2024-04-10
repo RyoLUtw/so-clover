@@ -1,14 +1,35 @@
+.labelDiv{
+    display: flex; /* This enables flexbox */
+    justify-content: space-around; /* This distributes space around items */
+    align-items: center; /* This vertically aligns items in the middle */
+    width: 100%; /* Ensures the container fills the parent width */
+}
+
+.labelDiv input {
+    flex: 1; /* Allows each input to grow and fill the container equally */
+    min-width: 0; /* Prevents inputs from overflowing their container */
+    margin: 1px; /* Optional: Adds some space between the inputs */
+  }
+
+  .labelDiv div {
+    flex: 1; /* Allows each input to grow and fill the container equally */
+    min-width: 0; /* Prevents inputs from overflowing their container */
+    margin: 1px; /* Optional: Adds some space between the inputs */
+  }
+
 .groupLabel{
     display: inline-flex; 
     justify-content: center; 
     align-items: center; 
     text-align: center; 
-    width: 18.5%;
+    
     height: 20vh;
-    border: 2px solid black;
+    border: 1px solid black;
     background-color: #cccccc;
     font-size: large;
     margin-bottom: 1vh;
+    flex: 1 0 auto; /* Allows children to shrink if necessary */
+    min-width: 0; /* Prevents flex items from sticking to their original width */
 }
 
 .inputBox{
@@ -16,12 +37,14 @@
     justify-content: center; 
     align-items: center; 
     text-align: center; 
-    width: 17%;
+    
     height: 20vh;
     border: 2px solid black;
     background-color: #cccccc;
     font-size: large;
     margin-bottom: 1vh;
+    flex: 1 0 auto; /* Allows children to shrink if necessary */
+    min-width: 0; /* Prevents flex items from sticking to their original width */
 }
 
 .textCardHolder{
@@ -37,7 +60,7 @@
     grid-template-columns: 1fr 1fr; /* Creates 2 columns */
     grid-template-rows: 1fr 1fr; /* Creates 2 rows */
     gap: 0px; /* Adds some space between the grid items */
-    width: 18vw; /* Adjust the width as needed */
+    width: 19vw; /* Adjust the width as needed */
     margin: 0.2vw;
     border: 1px solid black
 }
@@ -47,7 +70,7 @@
     display: flex;
     align-items: center; /* Centers content vertically */
     justify-content: center; /* Centers content horizontally */
-    height: 15vh; /* Or any desired height */
+    height: 10vh; /* Or any desired height */
 
 }
 
@@ -56,7 +79,7 @@
     grid-template-columns: 1fr 1fr 1fr; /* Creates 3 columns */
     grid-template-rows: 1fr; /* Creates 1 rows */
     gap: 0px; /* Adds some space between the grid items */
-    width: 18vw; /* Adjust the width as needed */
+    width: 19vw; /* Adjust the width as needed */
     margin-top: 1vh;
     border: 1px solid black
 }
@@ -66,7 +89,7 @@
     grid-template-columns: 1fr; 
     grid-template-rows: 1fr 1fr; /* Creates 2 rows */
     gap: 0px; /* Adds some space between the grid items */
-    margin: 0.2vw;
+    margin: 0vw;
     border: 0px solid black;
     align-items: center;
     justify-content: center;
