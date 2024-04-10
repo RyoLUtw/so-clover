@@ -9,43 +9,29 @@
     flex: 1; /* Allows each input to grow and fill the container equally */
     min-width: 0; /* Prevents inputs from overflowing their container */
     margin: 1px; /* Optional: Adds some space between the inputs */
-  }
-
-  .labelDiv div {
-    flex: 1; /* Allows each input to grow and fill the container equally */
-    min-width: 0; /* Prevents inputs from overflowing their container */
-    margin: 1px; /* Optional: Adds some space between the inputs */
-  }
-
-.groupLabel{
-    display: inline-flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-    
     height: 20vh;
     border: 1px solid black;
     background-color: #cccccc;
     font-size: large;
     margin-bottom: 1vh;
-    flex: 1 0 auto; /* Allows children to shrink if necessary */
-    min-width: 0; /* Prevents flex items from sticking to their original width */
-}
-
-.inputBox{
-    display: inline-flex; 
-    justify-content: center; 
-    align-items: center; 
     text-align: center; 
-    
+  }
+
+  .labelDiv div {
+    display: inline-flex; 
+    flex: 1; /* Allows each input to grow and fill the container equally */
+    min-width: 0; /* Prevents inputs from overflowing their container */
+    margin: 1px; /* Optional: Adds some space between the inputs */
     height: 20vh;
-    border: 2px solid black;
+    border: 1px solid black;
     background-color: #cccccc;
     font-size: large;
     margin-bottom: 1vh;
-    flex: 1 0 auto; /* Allows children to shrink if necessary */
-    min-width: 0; /* Prevents flex items from sticking to their original width */
-}
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+  }
+
 
 .textCardHolder{
     display: inline-flex; 
